@@ -1,8 +1,41 @@
 spring:
   application:
-    name: codetest
+    name: spring-security
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 5000 # 5초
+            readTimeout: 30000 # default 60초이나 외부 응답 최대 시간 20초를 반영하여 30초로 변경
+
+springdoc:
+  swagger-ui:
+    path: /security/swagger.html
+    doc-expansion: none
+    defaultModelsExpandDepth: -1
+    groups-order: ASC
+    tags-sorter: alpha
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
 
 server:
   servlet:
     encoding:
       charset: UTF-8
+
+security:
+  jwt:
+    # base64 인코딩 키
+    secret-key: =Z2VuZXJhdGVkLXNlY3JldC1rZXktZm9yLXVzZXItdG9rZW4
+    accessTokenExpiration: 3600000
