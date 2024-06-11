@@ -1,10 +1,10 @@
 # Project Summary
 
-이 프로젝트는 Spring-security가 적용된 Spring Boot 프로젝트 입니다. 회원 가입 및 로그인 기능 등을 포함합니다.
+이 프로젝트는 Spring-security가 적용된 Spring Boot 프로젝트 이다. 회원 가입 및 로그인 기능 등을 포함한다.
 
 ## API 문서
 
-이 프로젝트는 Springdoc OpenAPI를 사용하여 API 문서를 자동으로 생성합니다. 로컬에서 프로젝트를 실행한 후, 웹 브라우저에서 다음 URL을 방문하여 API 문서를 확인할 수 있습니다:
+이 프로젝트는 Springdoc OpenAPI를 사용하여 API 문서를 자동으로 생성한다. 로컬에서 프로젝트를 실행한 후, 웹 브라우저에서 다음 URL을 방문하여 API 문서를 확인할 수 있다:
 
 * http://localhost:8080/security/swagger.html
 
